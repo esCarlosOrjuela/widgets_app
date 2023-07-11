@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-
+import 'package:go_router/go_router.dart';
+import '../../config/Navigator/app_router.dart';
 import '../../domain/entities/menu_items.dart';
+
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -50,7 +52,19 @@ class _CustomListTitle extends StatelessWidget {
       leading: Icon(menuItem.icon, color: colors.primary),
       trailing: Icon(Icons.arrow_forward_ios_rounded, color: colors.primary),
       onTap: () {
-        
+        /* FORMA 1:
+        Navigator.of(context).push(
+          MaterialPageRoute(builder: (context) => const ButtonsScreen()),
+        );*/
+
+        // FORMA 2: 
+        // Navigator.pushNamed(context, menuItem.link);
+
+        // FORMA 3:
+        context.push(menuItem.link);
+
+        // FORMA 4:
+        // context.pushNamed(RoutesScreenApp.home.toString());
       },
     );
   }
