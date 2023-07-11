@@ -13,9 +13,9 @@ final colors = Theme.of(context).colorScheme;
         color: colors.primary,
         child: InkWell( // Permite agregar un evento a mi Widget con efectos de button
           onTap: () => {},
-          child: Padding(
-            child: Text('Custom Button', style: TextStyle(color: Colors.white)),
+          child: const Padding(
             padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+            child: Text('Custom Button', style: TextStyle(color: Colors.white)),
           ),
         ),
       ),
