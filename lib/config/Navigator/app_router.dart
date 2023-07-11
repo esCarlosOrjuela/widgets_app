@@ -19,6 +19,11 @@ final appRouter = GoRouter(
       name: RoutesScreenApp.cards.toString(),
       builder: (context, state) => const CardsScreen(),
     ),
+    GoRoute(
+      path: '/progress',
+      name: RoutesScreenApp.progress.toString(),
+      builder: (context, state) => const ProgressScreen(),
+    ),
   ]
 );
 
