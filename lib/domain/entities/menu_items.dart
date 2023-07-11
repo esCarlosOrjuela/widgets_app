@@ -12,8 +12,9 @@ class MenuItem{
     required this.icon, 
     required this.subTitle
   });
+}
 
-  static const appMenuItems = <MenuItem>[
+  const appMenuItems = <MenuItem>[
     MenuItem(
       title: 'Botones', 
       subTitle: 'Varios botones en Flutter',
@@ -27,5 +28,3 @@ class MenuItem{
       icon: Icons.credit_card, 
     ),
   ];
-
-}
