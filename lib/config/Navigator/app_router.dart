@@ -24,6 +24,12 @@ final appRouter = GoRouter(
 
 enum RoutesScreenApp {
   home,
-  buttons,
   cards,
+  buttons,
+  animated,
+  progress,
+  snackbar,
+  tutorial,
+  iuControls,
+  infiniteScroll,
 }
