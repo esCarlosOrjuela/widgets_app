@@ -34,6 +34,11 @@ final appRouter = GoRouter(
       name: RoutesScreenApp.animated.toString(),
       builder: (context, state) => const AnimatedScreen(),
     ),
+    GoRoute(
+      path: '/uiControls',
+      name: RoutesScreenApp.uiControls.toString(),
+      builder: (context, state) => const UiControlsScreen(),
+    ),
   ]
 );
 
@@ -45,6 +50,6 @@ enum RoutesScreenApp {
   progress,
   snackbar,
   tutorial,
-  iuControls,
+  uiControls,
   infiniteScroll,
 }
