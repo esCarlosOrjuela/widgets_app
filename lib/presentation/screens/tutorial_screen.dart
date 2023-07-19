@@ -13,7 +13,6 @@ class SlideInfo {
     this.caption, 
     this.imageUrl
   );
-
 }
 
 final slides = <SlideInfo>{

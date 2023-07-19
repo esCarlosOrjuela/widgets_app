@@ -70,4 +70,17 @@ class MenuItem{
       link: '/tutorial', 
       icon: Icons.accessible_rounded, 
     ),
+
+    MenuItem(
+      title: 'InfinititeScroll y Pull', 
+      subTitle: 'Listas infinitas y pull to refresh',
+      link: '/infiniteScroll', 
+      icon: Icons.list_alt_rounded, 
+    ),
+    MenuItem(
+      title: 'Counter', 
+      subTitle: 'Contador de clicks',
+      link: '/counter', 
+      icon: Icons.touch_app, 
+    ),
   ];
