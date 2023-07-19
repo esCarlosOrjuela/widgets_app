@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:widgets_app/presentation/providers/theme_provider.dart';
 import 'config/Navigator/app_router.dart';
 import 'config/theme/app_theme.dart';
 
@@ -15,17 +16,22 @@ void main() {
   );
 }
 
-class MainApp extends StatelessWidget {
+class MainApp extends ConsumerWidget {
+
   const MainApp({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+
+    final bool isDarkMode = ref.watch(isDarkModeProvider);
+    final int colorIdProvider = ref.watch(selectedColorIdProvider);
+
     return MaterialApp.router(
       //home: const HomeScreen(),
       title: 'Flutter Widgets',
       routerConfig: appRouter, // integramos goRouter => config/navigator/app_router 
       debugShowCheckedModeBanner: false,
-      theme: AppTheme(selectedColor: 3).getThemeApp(),
+      theme: AppTheme(selectedColor: colorIdProvider, isDarkMode:isDarkMode).getThemeApp(),
     );
   }
 }

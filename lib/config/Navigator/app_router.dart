@@ -1,6 +1,6 @@
 import 'package:go_router/go_router.dart';
-import 'package:widgets_app/presentation/screens/counter_screen.dart';
 import 'package:widgets_app/presentation/screens/screen.dart';
+
 
 final appRouter = GoRouter(
   initialLocation: '/home',
@@ -55,7 +55,11 @@ final appRouter = GoRouter(
       name: RoutesScreenApp.counter.toString(),
       builder: (context, state) => const CounterScreen(),
     ),
-
+    GoRoute(
+      path: '/themeChanger',
+      name: RoutesScreenApp.themeChanger.toString(),
+      builder: (context, state) => const ThemeChangerScreen(),
+    ),
   ]
 );
 
@@ -63,11 +67,12 @@ enum RoutesScreenApp {
   home,
   cards,
   buttons,
+  counter,
   animated,
   progress,
   snackbar,
   tutorial,
   uiControls,
+  themeChanger,
   infiniteScroll,
-  counter
 }

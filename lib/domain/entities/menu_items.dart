@@ -83,4 +83,10 @@ class MenuItem{
       link: '/counter', 
       icon: Icons.touch_app, 
     ),
+    MenuItem(
+      title: 'Cambiar Tema', 
+      subTitle: 'Cambiar tema aplicación',
+      link: '/themeChanger', 
+      icon: Icons.color_lens_outlined, 
+    ),
   ];
